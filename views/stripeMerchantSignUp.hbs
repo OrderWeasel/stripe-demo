@@ -1,0 +1,13 @@
+<h1>Stripe Merchant Sign Up</h1>
+<a id="connectstripe" href="" style="display:none">Connect Stripe</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accountLinkObj = {{{ accountLinkObj }}}
+    console.log(accountLinkObj);
+    const a = document.querySelector('#connectstripe');
+    a.href = accountLinkObj.url;
+    a.style = "display:block";
+  });
+
+</script>

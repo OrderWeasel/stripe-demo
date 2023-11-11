@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://js.braintreegateway.com/web/dropin/1.40.2/js/dropin.min.js"></script>
+  </head>
+  <body>
+    {{{body}}}
+    <script>
+      let tacosInCart = 0;
+
+      const addBtn = document.querySelector('#addBtn');
+      const qty = document.querySelector('#qty');
+      const total = document.querySelector('#total');
+      
+      if (addBtn) {
+        addBtn.addEventListener('click', (e) => {
+          tacosInCart += 1;
+          console.log(tacosInCart);
+          qty.textContent = tacosInCart;
+          total.textContent = Number.parseFloat(tacosInCart * 10.00).toFixed(2);
+        });
+      }
+    </script>
+  </body>
+</html>
