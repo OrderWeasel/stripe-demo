@@ -1,10 +1,11 @@
-<h1 style="color:magenta">Yes Siam Thai Cuisine</h1>
-<h2>Inetgrate your Square Account with Order Weasel!</h2>
+const express = require('express');
+const router = express.Router();
 
-
-<script>
 // OrderWeasel Square Sandbox Application ID = 'sandbox-sq0idb-7eLHu6HJWhA_tWlfYSVxXA'
 // OrderWeasel Square Sandbox Application Secret = 'sandbox-sq0csb-D2ld_a1psxQ7a2onFk4yoyfhKWszep-L3SbnafAS8_E'
 
+router.get('/', (req, res) => {
+  res.json( {msg : 'Hello World'} );
+});
 
-</script>
+module.exports =  router;

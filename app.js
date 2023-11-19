@@ -10,6 +10,7 @@ var menuCheckoutRouter = require('./routes/menuCheckout');
 var merchantDashboard = require('./routes/merchantDashboard');
 var stripeMerchantSignUp = require('./routes/stripeMerchantSignUp')
 var integrateSquare = require('./routes/integrateSquare');
+var oauthRedirect = require('./routes/oauthRedirect');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/menuCheckout', menuCheckoutRouter);
 app.use('/merchantDashboard', merchantDashboard);
 app.use('/stripeMerchantSignUp', stripeMerchantSignUp);
 app.use('/integrateSquare', integrateSquare);
+app.use('/oauth-redirect', oauthRedirect);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
