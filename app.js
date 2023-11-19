@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var menuCheckoutRouter = require('./routes/menuCheckout');
 var merchantDashboard = require('./routes/merchantDashboard');
 var stripeMerchantSignUp = require('./routes/stripeMerchantSignUp')
+var integrateSquare = require('./routes/integrateSquare');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/users', usersRouter);
 app.use('/menuCheckout', menuCheckoutRouter);
 app.use('/merchantDashboard', merchantDashboard);
 app.use('/stripeMerchantSignUp', stripeMerchantSignUp);
+app.use('/integrateSquare', integrateSquare);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
