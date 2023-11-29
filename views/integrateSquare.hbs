@@ -1,10 +1,19 @@
 <h1 style="color:magenta">Yes Siam Thai Cuisine</h1>
 <h2>Inetgrate your Square Account with Order Weasel!</h2>
-
+<a href="" id="sqintegration" data-codechallenge="{{codeChallenge}}" data-codeverifier="{{codeVerifier}}">Start Square Integration</a>
 
 <script>
 // OrderWeasel Square Sandbox Application ID = 'sandbox-sq0idb-7eLHu6HJWhA_tWlfYSVxXA'
 // OrderWeasel Square Sandbox Application Secret = 'sandbox-sq0csb-D2ld_a1psxQ7a2onFk4yoyfhKWszep-L3SbnafAS8_E'
+
+  
+  const a = document.querySelector('#sqintegration');
+  const codeChallenge = a.dataset.codechallenge;
+  const codeVerifier = a.dataset.codeverifier;
+  console.log(`code_challenge: ${codeChallenge}`);
+  console.log(`code_verifier: ${codeVerifier}`);
+  localStorage.setItem('codeVerifier', `${codeVerifier}`);
+  a.href = `https://connect.squareupsandbox.com/oauth2/authorize?scope=CASH_DRAWER_READ%20BANK_ACCOUNTS_READ&client_id=sandbox-sq0idb-7eLHu6HJWhA_tWlfYSVxXA&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth-redirect&code_challenge=${codeChallenge}`;
 
 
 </script>
