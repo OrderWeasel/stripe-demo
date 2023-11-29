@@ -13,7 +13,7 @@
   console.log(`code_challenge: ${codeChallenge}`);
   console.log(`code_verifier: ${codeVerifier}`);
   localStorage.setItem('codeVerifier', `${codeVerifier}`);
-  a.href = `https://connect.squareupsandbox.com/oauth2/authorize?scope=CASH_DRAWER_READ%20BANK_ACCOUNTS_READ&client_id=sandbox-sq0idb-7eLHu6HJWhA_tWlfYSVxXA&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth-redirect&code_challenge=${codeChallenge}`;
+  a.href = `https://connect.squareupsandbox.com/oauth2/authorize?scope=ITEMS_READ%20ORDERS_WRITE%20ORDERS_READ%20PAYMENTS_WRITE&client_id=sandbox-sq0idb-7eLHu6HJWhA_tWlfYSVxXA&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth-redirect&code_challenge=${codeChallenge}`;
 
 
 </script>
