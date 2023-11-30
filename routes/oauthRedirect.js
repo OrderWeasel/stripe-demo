@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
   console.log(req.body);
   const code_verifier = req.body.code_verifier;
   const code = req.body.code;
-  const client_id = 'sandbox-sq0idb-7eLHu6HJWhA_tWlfYSVxXA';
+  const client_id = 'sandbox-sq0idb-uvSS-ef1c6SEh4JePdXH1w';
   const redirect_uri = 'http://localhost:3000/oauth-redirect';
   const grant_type = 'authorization_code';
   //console.log(code_verifier, code, client_id, redirect_uri, grant_type);
@@ -44,10 +44,13 @@ router.post('/', async (req, res) => {
       })
     });
 
+    const result = await response.json();
     if (response.ok) {
-      const result = await response.json();
       console.log(result);
+    } else {
+      throw Error(result.message);
     }
+
   } catch (error) {
     console.log(error);
   }
